@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
+    // 動態宣告
     int **ptr, row, column;
 
     cout << "enter row limit" << endl;
@@ -26,5 +27,14 @@ int main() {
         }
         
     }
+
+    // 釋放記憶體
+    for (int i = 0; i < row; i++)
+    {
+        delete [] ptr[i];
+    }
+
+    delete [] ptr;
+    
     return 0;
 }
